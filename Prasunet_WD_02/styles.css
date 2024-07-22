@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.stopwatch {
+    text-align: center;
+    background: var(--stopwatch-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--button-background);
+    color: var(--button-color);
+    transition: background-color 0.3s ease, color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#laps {
+    margin-top: 20px;
+    text-align: left;
+    height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+    background: var(--laps-background);
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#laps div {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--lap-background);
+}
+
+#laps div:nth-child(odd) {
+    background: var(--lap-odd-background);
+}
+
+#laps div:nth-child(even) {
+    background: var(--lap-even-background);
+}
+
+#laps div:hover {
+    background-color: var(--lap-hover-background);
+}
+
+.lap-index {
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.lap-difference {
+    color: var(--text-color-secondary);
+    transition: color 0.3s ease;
+}
+
+.lap-time {
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+:root {
+    --background-color: #f0f0f0;
+    --stopwatch-background: #fff;
+    --text-color: #000;
+    --text-color-secondary: #666;
+    --button-background: #fff;
+    --button-color: #000;
+    --laps-background: #fafafa;
+    --lap-background: #ffffff;
+    --lap-odd-background: #f7f7f7;
+    --lap-even-background: #ffffff;
+    --lap-hover-background: #e0e0e0;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --stopwatch-background: #1e1e1e;
+    --text-color: #ffffff;
+    --text-color-secondary: #aaaaaa;
+    --button-background: #333333;
+    --button-color: #ffffff;
+    --laps-background: #222222;
+    --lap-background: #1e1e1e;
+    --lap-odd-background: #2e2e2e;
+    --lap-even-background: #1e1e1e;
+    --lap-hover-background: #444444;
+}
